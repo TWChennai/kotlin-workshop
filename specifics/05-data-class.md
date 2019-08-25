@@ -30,11 +30,11 @@ data class Person(val name: String) {
 
 In above example, only `name`  used inside toString(), equals(), hashCode(), and copy() implementations, only one component function component1().  Two Person objects with different ages will be treated as equal.
 
-###Parameterless constructor
+### Parameterless constructor
 ```kotlin
 data class User(val name: String = "", val age: Int = 0)
 ```
-###Copy()
+### Copy()
 
 Generated copy function looks like
 ```kotlin
@@ -46,7 +46,7 @@ Which allows us to copy certain properties and change certain properties like be
 val jack = User(name = "Jack", age = 1)
 val olderJack = jack.copy(age = 2)
 ```
-###Data Classes and Destructuring Declarations
+### Data Classes and Destructuring Declarations
 ```kotlin
 val jane = User("Jane", 35) 
 val (name, age) = jane
