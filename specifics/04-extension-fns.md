@@ -10,9 +10,9 @@
 ```kotlin
 //define extension function
 fun MutableList<Int>.swap(index1: Int, index2: Int) {
-val tmp = this[index1] // 'this' corresponds to the list
-this[index1] = this[index2]
-this[index2] = tmp
+    val tmp = this[index1] // 'this' corresponds to the list
+    this[index1] = this[index2]
+    this[index2] = tmp
 }
 
 //call extension function
@@ -21,9 +21,9 @@ list.swap(0, 2) // 'this' inside 'swap()' will hold the value of 'list'
 
 //generic example
 fun <T> MutableList<T>.swap(index1: Int, index2: Int) {
-val tmp = this[index1] // 'this' corresponds to the list
-this[index1] = this[index2]
-this[index2] = tmp
+    val tmp = this[index1] // 'this' corresponds to the list
+    this[index1] = this[index2]
+    this[index2] = tmp
 }
 ````
 
