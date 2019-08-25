@@ -24,8 +24,8 @@ The inline function `myInlinedFun()` will be expanded at the call site inside `f
 
 ```kotlin
 fun foo() {
-	println("before")
-	print("blaah")
-	println("after")
+  println("before")
+  print("blaah")
+  println("after")
 }
 ```
