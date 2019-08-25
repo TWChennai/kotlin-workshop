@@ -1,4 +1,4 @@
-## Sealed Classes
+## Grouping
 
 The Kotlin standard library provides extension functions for grouping collection elements. The basic function groupBy() takes a lambda function and returns a Map.
 
