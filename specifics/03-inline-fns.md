@@ -1,13 +1,15 @@
 ## Inline functions
 
-````
+```kotlin
 inline fun inlined(block: () -> Unit) {
-    println("hi!")
+    println("before")
+    block()
+    println("after")
 }
 
 fun foo() {
     inlined {
-        return // OK: the lambda is inlined
+    	print("blaah")
     }
 }
-````
+```
