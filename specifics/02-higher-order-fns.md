@@ -25,7 +25,9 @@ retry(TOTAL_RETRIES) {
 ````
 
 ```kotlin
-//lambda can access its closure, i.e. variable declared in outer scope. sum is not part of lambda stackframe hence needs to be copied and passed around.
+/*lambda can access its closure, i.e. variable declared in outer scope. sum is not part of 
+lambda stackframe hence needs to be copied and passed around.*/
+
 var sum = 0
 ints.filter { it > 0 }.forEach {
     sum += it
