@@ -2,7 +2,7 @@
 
 **A higher-order function is a function that takes functions as parameters, or returns a function**
 
-````
+```kotlin
 fun <T> retry(retryLimit: Int, fn: () -> T): T {
     var retryCount = 0
     while (retryCount < retryLimit) {
@@ -18,7 +18,7 @@ fun <T> retry(retryLimit: Int, fn: () -> T): T {
 ````
 
 
-````
+````kotlin
 retry(TOTAL_RETRIES) {
     println("I will be printed n times...")
 }
