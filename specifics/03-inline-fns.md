@@ -20,7 +20,7 @@ fun foo() {
 }
 ```
 
-The inline function `myInlinedFun()` will be expanded at the call site inside `foo()` looking something like
+The inline function `myInlinedFun()` will be expanded at the call site during compile time inside `foo()`. Now foo() will finally look something like
 
 ```kotlin
 fun foo() {
