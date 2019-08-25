@@ -13,3 +13,13 @@ fun foo() {
     }
 }
 ```
+
+The inlined function will be expanded at the call site inside foo() looking something like
+
+```kotlin
+fun foo() {
+	println("before")
+	print("blaah")
+	println("after")
+}
+```
