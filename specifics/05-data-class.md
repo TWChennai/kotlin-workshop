@@ -18,7 +18,7 @@ data classes have to fulfill the following requirements:
 * All primary constructor parameters need to be marked as val or var;
 * Data classes cannot be abstract, open, sealed or inner;
 
-###Properties Declared in the Class Body
+### Properties Declared in the Class Body
 
  Compiler only uses the properties defined inside the primary constructor for the automatically generated functions. To exclude a property from the generated implementations, declare it inside the class body:
 
