@@ -2,6 +2,22 @@
 
 **A higher-order function is a function that takes functions as parameters, or returns a function**
 
+***Ex1:***
+
+```kotlin
+fun higherOrderFunction(block: () -> Unit) {
+    block()
+}
+
+fun foo() {
+    higherOrderFunction {
+        println("do something here")
+    }
+}
+```
+
+***Ex2:***
+
 ```kotlin
 fun <T> retry(retryLimit: Int, fn: () -> T): T {
     var retryCount = 0
@@ -15,18 +31,14 @@ fun <T> retry(retryLimit: Int, fn: () -> T): T {
     throw RuntimeException("All retries are done..")
 }
 
-````
-
-
-```kotlin
 retry(TOTAL_RETRIES) {
     println("I will be printed n times...")
 }
 ````
 
+Lambdas can access its closure, i.e. variable declared in outer scope. sum is not part of lambda stackframe hence needs to be copied and passed around.
+
 ```kotlin
-/*lambda can access its closure, i.e. variable declared in outer scope. sum is not part of 
-lambda stackframe hence needs to be copied and passed around.*/
 
 var sum = 0
 ints.filter { it > 0 }.forEach {
