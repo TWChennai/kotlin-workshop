@@ -24,8 +24,6 @@ retry(TOTAL_RETRIES) {
 }
 ````
 
-**Caution** Using higher-order functions imposes certain runtime penalties: each function is an object, and it captures a closure, i.e. those variables that are accessed in the body of the function. Memory allocations (both for function objects and classes) and virtual calls introduce runtime overhead.
-
 ```kotlin
 //lambda can access its closure, i.e. variable declared in outer scope. sum is not part of lambda stackframe hence needs to be copied and passed around.
 var sum = 0
