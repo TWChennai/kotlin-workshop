@@ -12,7 +12,7 @@ Data classes are classes whose primary purpose is to hold data (dumb POJOs). The
 data class User(val name: String, val age: Int)
 ```
 
-data classes have to fulfill the following requirements:
+Data classes have to fulfill the following requirements:
 
 * The primary constructor needs to have at least one parameter;
 * All primary constructor parameters need to be marked as val or var;
