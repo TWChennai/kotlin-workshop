@@ -41,6 +41,8 @@ enum class ScreenStateField(val someData: SomeData) {
 ```
 But here we have to create Error, Loading states with dummy SomeData assuming we are fetching it from network.
 
+We can achieve this using Sealed classes and when expressions
+
 ```kotlin
 sealed class ScreenState {
     data class Error(val message: String) : ScreenState()
