@@ -15,4 +15,6 @@ fun foo() {
 
 **Things to note**
 
-We will lose access to any private variable or function of the class inside the inline function. So it’s better to make functions inline which are very generic and don’t use a class level variable or function to achieve their functionality.
+* We will lose access to any private variable or function of the class inside the inline function. So it’s better to make functions inline which are very generic and don’t use a class level variable or function to achieve their functionality.
+
+* Do not inline for bigger functions as it degrades the performance.
