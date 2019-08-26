@@ -149,11 +149,9 @@ for (x in 1..10 step 2) {
     print(x)
 }
 
-```
 //return. By default returns from the nearest enclosing function or anonymous function.
 //break. Terminates the nearest enclosing loop.
 //continue. Proceeds to the next step of the nearest enclosing loop.
-```
 
 //break with label
 fun loopIt() {
