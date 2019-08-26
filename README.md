@@ -11,3 +11,5 @@
 - Problem Statements
 	- [prob1](./problem-statements/prob1.md)
 	- [prob2](./problem-statements/prob2.md)
+- Next steps
+	- [next-steps](./next-steps/next-steps.md)
