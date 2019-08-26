@@ -46,3 +46,10 @@ ints.filter { it > 0 }.forEach {
 }
 println(sum)
 ```
+
+
+### Exercise
+
+**Filter list with custom filters**
+
+The custom filter operation should be passed on a param to a higher order function to perform filtering. 
