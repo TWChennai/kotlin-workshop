@@ -45,8 +45,8 @@ We can achieve this using Sealed classes and when expressions
 
 ```kotlin
 sealed class ScreenState {
-    data class Error(val message: String) : ScreenState()
-    data class Loading(val message: String) : ScreenState()
+    data class Error(val errorMessage: String) : ScreenState()
+    data class Loading() : ScreenState()
     data class Data(val someData: SomeData) : ScreenState()
 }
 
