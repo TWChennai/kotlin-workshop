@@ -21,6 +21,7 @@ x += 1 //changed after assignment
 Exercise
 1. Declare a String constant with initial value "Constant" using explicit type
 2. Change the above constant to use type inference
+3. Change the above to a variable, update it and print its value.
 */
 
 ```
