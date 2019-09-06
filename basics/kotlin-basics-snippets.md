@@ -261,6 +261,19 @@ fun foo() {
     }
     print(" done with implicit label")
 }
+/*
+Exercise
+1. Try to replace if-else-if with when syntax in the following function:
+fun foo(name:String, age:Int): Person {
+    if(name.length > 10) {
+        throw Exception("Really long name!")
+    } else if(age > 100) {
+        throw Exception("Impossible age!!")
+    } else {
+        return Person(name, age)
+    }
+}
+*/
 ```
 
 #### Collections
