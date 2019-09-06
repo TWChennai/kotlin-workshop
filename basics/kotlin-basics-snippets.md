@@ -5,24 +5,45 @@ fun main() {
     println("Hello world!")
 }
 
-//---Variables---
-//vals and vars
+```
 
+#### Variables
+
+```kotlin
 val a: Int = 1  // immediate assignment
 val b = 2   // `Int` type is inferred
 
 var x = 5 // `Int` type is inferred
 x += 1 //changed after assignment
 
-val oneMillion = 1_000_000//underscores for readability
+/*
+Exercise
+1. Declare a String constant with initial value "Constant" using explicit type
+2. Change the above constant to use type inference
+*/
 
-//---Nullability---
+```
+
+#### Types
+
+booleans, numbers, characters, strings, arrays.
+
+```kotlin
+
+val isKotlinGood: Boolean = true
+val int = 1
+val cChar = 'a'
+val cStr = "a"
+val arrayOfInt = arrayListOf(1, 2, 3, 4)
+```
+
+#### Nullability
+
+```kotlin
 val x: Int // Error - variable must be initialized
-
 val x: Int = null // Error - null cannot be a value for non-null type Int
 val x: Int? = null // OK
-val y: String = null // Error - null cannot be a value for non-null type 
-val y: String? = null // OK
+
 
 //safe call (?)
 val name: String? = null
@@ -39,7 +60,7 @@ var i: Int? = 10
 i?.let { println(it) }//prints i 
 
 i = null
-i?.let { println(it) }//no-op
+i?.let { println(it) }//doesn't print
 
 //elvis operator
 val l = b?.length ?: -1
@@ -49,10 +70,17 @@ fun printName(name: String?) {
     println(s)
 }
 
-//---Types----
-//Basic types used in Kotlin: numbers, characters, booleans, arrays, and strings.
+/*
+Exercise
+1. Create a function that takes two nullable String args and returns a Concatenated String if  
+at least one arg is non-null. Otherwise returns Empty String.
+*/
+```
 
-//---Functions---
+#### Functions
+
+
+```kotlin
 
 //Function without a return type
 fun printSum(a: Int, b: Int) {
@@ -72,7 +100,7 @@ fun maxOf(a: Int, b: Int): Int {
     if (a > b) {
         return a
     } else {
-        return
+        return b
     }
 }
 
@@ -84,7 +112,42 @@ fun parseInt(str: String): Int? {
     // ...
 }
 
-//---Type Checks and Casts/SmartCasts: 'is' and 'as'---
+//named arguments
+fun displayGreeting(message: String, name: String = "Guest") {
+    println("Hello $name, $message")
+}
+
+displayGreeting("Welcome to Kotlin") // Hello Guest, Welcome to Kotlin
+displayGreeting("Welcome to Kotlin", "Folks") // Hello Folks, Welcome to Kotlin
+
+//varargs
+fun sumOfNumbers(vararg numbers: Double): Double {
+    var sum: Double = 0.0
+    for(number in numbers) {
+        sum += number
+    }
+    return sum
+}
+
+sumOfNumbers(1.5, 2.0)  // Result = 3.5
+sumOfNumbers(1.5, 2.0, 3.5, 4.0, 5.8, 6.2)  // Result = 23.0
+
+/*
+Exercise
+1. Create a function that takes two Int args and returns 'OE', 'EO', 'OO', EE'  
+where O stands for Odd and E for even.
+
+2. Create a function that takes a String arg and a Int args and returns true or false  
+based on if the length of given String arg matches the given Int arg
+
+3. Create a function that takes a variable number of String args and returns a Concatenated String with ', ' separator.
+ */
+
+```
+
+#### Type Checks and Casts/SmartCasts: 'is' and 'as'
+
+```kotlin
 fun getStringLength(obj: Any): Int? { //Any is a placeholder type for any kind of type. Rarely useful without casting :)
     if (obj !is String) return null
 
@@ -100,8 +163,11 @@ val x: String = y as String //if y is null, it causes exception
 
 //"Safe" cast
 val x: String? = y as? String
+```
 
-//---Control flow---
+#### Control flow
+
+```kotlin
 //for loop over array
 val items = listOf("apple", "banana", "kiwifruit")
 for (item in items) {
@@ -186,10 +252,13 @@ fun foo() {
     }
     print(" done with implicit label")
 }
+```
 
-//---Collections---
-//A collection contains multiple items that can be accessed through subscripting. 
-//Kotlin offers three main types of collections: Arrays, Lists, and Maps.
+#### Collections
+A collection contains multiple items that can be accessed through subscripting.  
+Kotlin offers three main types of collections: Arrays, Lists, and Maps.
+
+```kotlin
 
 val cardNames: Array = arrayOf("Jack", "Queen", "King")//explicit type
 val cardNames = arrayOf("Jack", "Queen", "King")//implicit type
@@ -253,9 +322,12 @@ val cardName = when (cardInt) {
     13 -> "King"
     else -> "Other"
 }
+```
 
-//---Lambdas---
-// Lambdas are code blocks enclosed in curly braces.
+#### Lambdas
+Lambdas are code blocks enclosed in curly braces.
+
+```kotlin
 
 val items = listOf(1, 2, 3, 4, 5)
 
@@ -296,10 +368,12 @@ ints.filter { it > 0 }.forEach {
     sum += it
 }
 println(sum)
+```
 
-//---Higher Order Functions---
-//A higher-order function is a function that takes functions as parameters, or returns a function.
+#### Higher Order Functions
+A higher-order function is a function that takes functions as parameters, or returns a function.
 
+```kotlin
 val ints = listOf(1, 2, 3, 4)
 ints.filter { it % 2 == 0 }.forEach { value ->
     println(value)
