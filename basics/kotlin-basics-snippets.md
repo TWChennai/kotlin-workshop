@@ -169,8 +169,7 @@ val x: String? = y as? String
 
 /*
 Exercises
-1. Create a function that takes a nullable Generic type and prints is length if it is a String.
-2. Create a function that takes an array of mixed types(int, boolean, double, char, String) and prints their type
+1. Create a function that takes an array of mixed types(int, boolean, double, char, String) and prints their type
 ```
 
 #### Control flow
