@@ -30,11 +30,11 @@ booleans, numbers, characters, strings, arrays.
 
 ```kotlin
 
-val isKotlinGood: Boolean = true
-val int = 1
-val cChar = 'a'
-val cStr = "a"
-val arrayOfInt = arrayListOf(1, 2, 3, 4)
+val isKotlinFun: Boolean = true
+val myInteger = 1
+val mCharacter = 'c'
+val myString = "string"
+val arrayOfIntegers = arrayListOf(1, 2, 3, 4)
 ```
 
 #### Nullability
@@ -73,7 +73,7 @@ fun printName(name: String?) {
 /*
 Exercise
 1. Create a function that takes two nullable String args and returns a Concatenated String if  
-at least one arg is non-null. Otherwise returns Empty String.
+at least one arg is non-null. In all other cases the function returns an empty string.
 */
 ```
 
@@ -82,20 +82,20 @@ at least one arg is non-null. Otherwise returns Empty String.
 
 ```kotlin
 
-//Function without a return type
+//Function without a return type (Unit - equivalent of void in Java)
 fun printSum(a: Int, b: Int) {
     println("sum of $a and $b is ${a + b}") //string interpolation
 }
 
-//Function having two Int parameters with Int return type:
+//Function with two Int parameters and Int return type:
 fun sum(a: Int, b: Int): Int {
-    return a + b //no semi-colons
+    return a + b //no semi-colons are required at the end of statements
 }
 
 //Function with an expression body and inferred return type:
 fun sum(a: Int, b: Int) = a + b
 
-//example
+//Example of a function which returns max of two given ints
 fun maxOf(a: Int, b: Int): Int {
     if (a > b) {
         return a
@@ -104,15 +104,23 @@ fun maxOf(a: Int, b: Int): Int {
     }
 }
 
-//example
+// The maxOf function now with an with expression body
 fun maxOf(a: Int, b:Int) = if (a > b) a else 
 
-//Function with nullable Int return type. Compiler forces you to deal with it properly at call site.
+//Function with nullable Int return type. Compiler forces us to handle nulls in consumer code.
 fun parseInt(str: String): Int? {
     // ...
 }
 
-//named arguments
+fun consumer() {
+    val invalidInt = parseInt("")
+    // compilation fails
+    val invalidSum = invalidInt + 2
+    // compilation passes
+    val validSum = (invalidInt ?: 0) + 2
+}
+
+//Named arguments
 fun displayGreeting(message: String, name: String = "Guest") {
     println("Hello $name, $message")
 }
@@ -120,7 +128,7 @@ fun displayGreeting(message: String, name: String = "Guest") {
 displayGreeting("Welcome to Kotlin") // Hello Guest, Welcome to Kotlin
 displayGreeting("Welcome to Kotlin", "Folks") // Hello Folks, Welcome to Kotlin
 
-//varargs
+//varargs keyword enables us to send an array of a type as a single parameter to a function
 fun sumOfNumbers(vararg numbers: Double): Double {
     var sum: Double = 0.0
     for(number in numbers) {
@@ -151,11 +159,11 @@ based on if the length of given String arg matches the given Int arg
 fun getStringLength(obj: Any): Int? { //Any is a placeholder type for any kind of type. Rarely useful without casting :)
     if (obj !is String) return null
 
-    //can someone tell what the compiler is doing smartly here
+    //What is the compiler is doing smartly here?
     return obj.length
 }
 
-//can someone tell what the compiler is doing smartly here.
+//What is the compiler is doing smartly here?
 if (x !is String || x.length == 0) return
 
 //"Unsafe" cast operator
@@ -168,16 +176,16 @@ val x: String? = y as? String
 #### Control flow
 
 ```kotlin
-//for loop over array
+//for loop over an array
 val items = listOf("apple", "banana", "kiwifruit")
 for (item in items) {
     println(item)
 }
 
-//for loop over array with indices
+//for loop over an array with indices
 val items = listOf("apple", "banana", "kiwifruit")
 for (index in items.indices) {
-    println("item at $index is ${items[index]}")
+    println("Item at $index is ${items[index]}")
 }
 
 //while loop
@@ -188,7 +196,7 @@ while (index < items.size) {
     index++
 }
 
-//when expression
+//Pattern matching with when expression
 fun describe(obj: Any): String =
     when (obj) {
         1          -> "One"
@@ -215,18 +223,18 @@ for (x in 1..10 step 2) {
     print(x)
 }
 
-//return. By default returns from the nearest enclosing function or anonymous function.
-//break. Terminates the nearest enclosing loop.
-//continue. Proceeds to the next step of the nearest enclosing loop.
+//return: By default returns from the nearest enclosing function or anonymous function.
+//break: Terminates the nearest enclosing loop.
+//continue: Proceeds to the next step of the nearest enclosing loop.
 
 //break with label
-fun loopIt() {
-	loop@ for (i in 1..100) {
+fun foo() {
+    loop@ for (i in 1..100) {
     	for (j in 1..100) {
-        	if (j == 5) break@loop
-	        println("i:$i - j:$j")
+            if (j == 5) break@loop
+	    println("i:$i - j:$j")
     	}
-	}
+    }
 }
 
 fun foo() {
@@ -238,8 +246,8 @@ fun foo() {
 }
 
 fun foo() {
-    listOf(1, 2, 3, 4, 5).forEach lit@{
-        if (it == 3) return@lit // local return to the caller of the lambda, i.e. the forEach loop
+    listOf(1, 2, 3, 4, 5).forEach loop@{
+        if (it == 3) return@loop // local return to the caller of the lambda, i.e. the forEach loop
         print(it)
     }
     print(" done with explicit label")
