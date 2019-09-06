@@ -120,7 +120,7 @@ fun consumer() {
     val validSum = (invalidInt ?: 0) + 2
 }
 
-//Named arguments
+//Default arguments
 fun displayGreeting(message: String, name: String = "Guest") {
     println("Hello $name, $message")
 }
@@ -129,12 +129,10 @@ displayGreeting("Welcome to Kotlin") // Hello Guest, Welcome to Kotlin
 displayGreeting("Welcome to Kotlin", "Folks") // Hello Folks, Welcome to Kotlin
 
 //varargs keyword enables us to send an array of a type as a single parameter to a function
-fun sumOfNumbers(vararg numbers: Double): Double {
-    var sum: Double = 0.0
-    for(number in numbers) {
-        sum += number
+fun printNames(vararg names: String): String {
+    for(name in names) {
+        println(name)
     }
-    return sum
 }
 
 sumOfNumbers(1.5, 2.0)  // Result = 3.5
@@ -148,8 +146,8 @@ where O stands for Odd and E for even.
 2. Create a function that takes a String arg and a Int args and returns true or false  
 based on if the length of given String arg matches the given Int arg
 
-3. Create a function that takes a variable number of String args and returns a Concatenated String with ', ' separator.
- */
+3. Create a function that takes a variable number of Int args and returns the Sum
+*/
 
 ```
 
