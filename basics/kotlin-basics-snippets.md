@@ -401,4 +401,7 @@ ints.filter { it % 2 == 0 }.forEach { value ->
     println(value)
 }
 
+// Composing functions and return a new function
+fun compose(f: (Int) -> String, g: (Double) -> Int): (Double) -> String = { x -> f(g(x)) }
+
 ```
