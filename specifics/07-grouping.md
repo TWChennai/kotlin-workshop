@@ -17,7 +17,7 @@ println(numbers.groupingBy { if (it % 2 == 0) "odd" else "even" }.fold(0) {acc, 
 
 ### Exercise
 
-```
+```kotlin
 enum class ProductType {
   FRUIT,
   VEGETABLE
