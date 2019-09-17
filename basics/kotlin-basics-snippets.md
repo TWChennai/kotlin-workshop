@@ -300,7 +300,7 @@ val cards = mutableListOf("Jack", "Queen", "King")
 cards.add("Ace") // Jack, Queen, King, Ace
 cards.remove("Jack") // Queen, King, Ace
 cards.clear() // empty list
-cards.addAll("Jack", "Queen", "King", "Ace"
+cards.addAll("Jack", "Queen", "King", "Ace")
 
 //example
 val listWithNulls: List<String?> = listOf("Kotlin", null)
