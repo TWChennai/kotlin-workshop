@@ -8,7 +8,6 @@
 	- Data Classes
 	- Sealed Classes
 
-
 	- Generics
 	- Nested Classes
 	- Enum Classes
@@ -20,48 +19,48 @@
 
 #### Collections
 
-- Collections Overview
-- Constructing Collections
-- Iterators
-- Ranges and Progressions
-- Sequences
+	- Collections Overview
+	- Constructing Collections
+	- Iterators
+	- Ranges and Progressions
+	- Sequences
 
-- Operations Overview
-- Transformations
-- Filtering
-- Plus and Minus Operators
-- Grouping
-- Retrieving Collection Parts
-- Retrieving Single Elements
+	- Operations Overview
+	- Transformations
+	- Filtering
+	- Plus and Minus Operators
+	- Grouping
+	- Retrieving Collection Parts
+	- Retrieving Single Elements
 
-- Ordering
-- Aggregate Operations
-- Collection Write Operations
-- List Specific Operations
-- Set Specific Operations
-- Map Specific Operations 
+	- Ordering
+	- Aggregate Operations
+	- Collection Write Operations
+	- List Specific Operations
+	- Set Specific Operations
+	- Map Specific Operations 
 
 
 #### Other
 
-- Destructuring Declarations
-- Type Checks and Casts
-- This expressions
-- Equality
+	- Destructuring Declarations
+	- Type Checks and Casts
+	- This expressions
+	- Equality
 
-- Operator overloading
-- Null Safety
-- Exceptions
-- Annotations
+	- Operator overloading
+	- Null Safety
+	- Exceptions
+	- Annotations
 
-- Reflection
-- Scope Functions
-- Type-Safe Builders
-- Experimental API Markers 
+	- Reflection
+	- Scope Functions
+	- Type-Safe Builders
+	- Experimental API Markers 
 
 #### Native
 
-- Concurrency
-- Couroutines
+	- Concurrency
+	- Couroutines
 
 
