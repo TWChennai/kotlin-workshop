@@ -1,12 +1,12 @@
 #### Classes & Objects
 
-- Classes and Inheritance
-- Properties and Fields
-- Interfaces
-- Visibility Modifiers
-- Extensions
-- Data Classes
-- Sealed Classes
+	- Classes and Inheritance
+	- Properties and Fields
+	- Interfaces
+	- Visibility Modifiers
+	- Extensions
+	- Data Classes
+	- Sealed Classes
 
 - Generics
 - Nested Classes
