@@ -8,7 +8,6 @@
 	- Data Classes
 	- Sealed Classes
 
-#### ''
 
 	- Generics
 	- Nested Classes
