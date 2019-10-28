@@ -8,14 +8,14 @@
 	- Data Classes
 	- Sealed Classes
 
-- Generics
-- Nested Classes
-- Enum Classes
-- Objects
-- Type Aliases
-- Inline Classes
-- Delegation
-- Delegated Properties 
+	- Generics
+	- Nested Classes
+	- Enum Classes
+	- Objects
+	- Type Aliases
+	- Inline Classes
+	- Delegation
+	- Delegated Properties 
 
 #### Collections
 
