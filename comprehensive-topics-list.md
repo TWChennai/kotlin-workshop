@@ -1,4 +1,4 @@
-###Classes & Objects
+#### Classes & Objects
 
 	- Classes and Inheritance
 	- Properties and Fields
@@ -17,7 +17,7 @@
 	- Delegation
 	- Delegated Properties 
 
-###Collections
+#### Collections
 
 	- Collections Overview
 	- Constructing Collections
@@ -41,7 +41,7 @@
 	- Map Specific Operations 
 
 
-###Other
+#### Other
 
 	- Destructuring Declarations
 	- Type Checks and Casts
@@ -58,7 +58,7 @@
 	- Type-Safe Builders
 	- Experimental API Markers 
 
-###Native
+#### Native
 
 	- Concurrency
 	- Couroutines
