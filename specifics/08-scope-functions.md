@@ -18,7 +18,7 @@ The scope functions differ by the result they return:
 - `let`, `run`, and `with` return the lambda result.
 
 ### Table of Differences
-| Function |	Object reference	| Return value	| Is extension function |
+| Function |	Object Reference	| Return Value	| Is Extension Function |
 |---|---|---|---|
 |let|	it|	Lambda result|	Yes|
 |run|	this|	Lambda result|	Yes|
