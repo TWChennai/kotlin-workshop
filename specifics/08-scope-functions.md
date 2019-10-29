@@ -29,6 +29,32 @@ The scope functions differ by the result they return:
 
 ### let
 
+The scope function `let` can be used to invoke one or more functions on results of call chains. For eg:
+ ```
+ val numbers = listOf(1, 2, 3, 4)
+ numbers.filter { it > 2 }.let { println(it.size) }
+ ```
+
+It is used in the following cases:
+ - Executing a code block only with non-null values. For eg:
+   ```
+   val nullableString: String? = "Not null"
+   nullableString?.let { println(it.length) }
+   ```
+ - Introducing local variables with a limited scope for improving code readability. For eg:
+   ```
+   val numbers = listOf(1, 2, 3, 4)
+   numbers.filter { it > 1 }.let {
+       val header = "Header"
+       val footer = "Footer"
+       val separator = "******"
+       println("$header")
+       println("$separator")
+       it.forEach { println("$it\n$separator") }
+       println("$footer")
+   }
+   ```
+
 ### also
 
 ### run
