@@ -15,5 +15,5 @@
 - Next steps
 	- [next-steps](./next-steps/next-steps.md)
 
-- Comprehensive Topics List
-	- [list](comprehensive-topics-list.md)
+- Summary
+	- [Comprehensive Topics](comprehensive-topics-list.md)
