@@ -63,4 +63,39 @@ It is used in the following cases:
 
 ### apply
 
-### Exercise
+### Mutation of Objects
+The following example illustrates how objects are mutated from within scope functions:
+```kotlin
+fun testScopeFunctions() {
+    val person: Person? = Person("John", 30)
+
+    val mutationLet = person?.let {
+        ++it.age
+    }
+
+    println("\nMutation (let): $mutationLet\n")
+
+    val mutationAlso = person?.also {
+        ++it.age
+    }
+
+    println("\nMutation (also): $mutationAlso\n")
+
+    val mutationRun = person?.run {
+        ++age
+    }
+
+    println("\nMutation (run): $mutationRun\n")
+
+    val mutationApply = person?.apply {
+        ++age
+    }
+
+    println("\nMutation (apply): $mutationApply\n")
+
+    person?.let { Person(it.name, ++it.age) }
+        ?.let { println("Name: ${it.name}\nAge: ${it.age}\n") }
+
+    println(person)
+}
+```
