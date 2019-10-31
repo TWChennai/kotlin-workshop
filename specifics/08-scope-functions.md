@@ -30,19 +30,19 @@ The scope functions differ by the result they return:
 ### let
 
 The scope function `let` can be used to invoke one or more functions on results of call chains. For eg:
- ```
+ ```kotlin
  val numbers = listOf(1, 2, 3, 4)
  numbers.filter { it > 2 }.let { println(it.size) }
  ```
 
 It is used in the following cases:
  - Executing a code block only with non-null values. For eg:
-   ```
+   ```kotlin
    val nullableString: String? = "Not null"
    nullableString?.let { println(it.length) }
    ```
  - Introducing local variables with a limited scope for improving code readability. For eg:
-   ```
+   ```kotlin
    val numbers = listOf(1, 2, 3, 4)
    numbers.filter { it > 1 }.let {
        val header = "Header"
@@ -63,4 +63,41 @@ It is used in the following cases:
 
 ### apply
 
-### Exercise
+### Mutation of Objects
+The following example illustrates how objects are mutated from within scope functions:
+```kotlin
+fun main() {
+    val person: Person? = Person("John", 30)
+
+    val mutationLet = person?.let {
+        ++it.age
+    }
+
+    println("\nMutation (let): $mutationLet\n")
+
+    val mutationAlso = person?.also {
+        ++it.age
+    }
+
+    println("\nMutation (also): $mutationAlso\n")
+
+    val mutationRun = person?.run {
+        ++age
+    }
+
+    println("\nMutation (run): $mutationRun\n")
+
+    val mutationApply = person?.apply {
+        ++age
+    }
+
+    println("\nMutation (apply): $mutationApply\n")
+
+    person?.let { Person(it.name, ++it.age) }
+        ?.let { println("Name: ${it.name}\nAge: ${it.age}\n") }
+
+    println(person)
+}
+```
+
+### Exercises
