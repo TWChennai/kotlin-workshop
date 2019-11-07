@@ -81,8 +81,10 @@ data class Employee(
 ```kotlin
 interface A {
     fun foo() { print("A foo") }
-    fun bar() //bar is not marked abstract because that's implicit within 
-    		  //an interface declaration if the function has no body.
+    
+    //bar is not marked abstract because that's implicit within
+    //an interface declaration if the function has no body.
+    fun bar() 
 }
 
 interface B {
