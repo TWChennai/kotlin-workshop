@@ -81,7 +81,8 @@ data class Employee(
 ```kotlin
 interface A {
     fun foo() { print("A foo") }
-    fun bar() //bar is not marked abstract because that's implicit within an interface declaration if the function has no body.
+    fun bar() //bar is not marked abstract because that's implicit within 
+    		  //an interface declaration if the function has no body.
 }
 
 interface B {
@@ -93,7 +94,8 @@ class C : A {
     override fun bar() { print("bar") } //we must override bar
 }
 
-//we must override all methods that are common in multiple interfaces and specify exactly how the super implementations should be called
+//we must override all methods that are common in multiple interfaces and 
+//specify exactly how the super implementations should be called
 class D : A, B {
     override fun foo() {
         super<A>.foo()
