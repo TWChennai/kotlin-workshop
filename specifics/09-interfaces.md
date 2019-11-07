@@ -93,7 +93,8 @@ interface B {
 }
 
 class C : A {
-    override fun bar() { print("bar") } //we must override bar
+	//we must override bar
+    override fun bar() { print("bar") } 
 }
 
 //we must override all methods that are common in multiple interfaces and 
