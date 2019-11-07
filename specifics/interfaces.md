@@ -7,9 +7,9 @@
 
 ### Kotlin Interfaces
 	
-	- Can contain abstract methods and implementations
-	- Cannot contain state (properties with backing fields)
-	- Can contain abstract properties and accessor implementations for these properties but properties cannot have a backing field (state)
+- Can contain abstract methods and implementations
+- Cannot contain state (properties with backing fields)
+- Can contain abstract properties and accessor implementations for these properties but properties cannot have a backing field (state)
 
 
 ```
