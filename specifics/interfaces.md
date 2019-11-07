@@ -12,7 +12,7 @@
 - Can contain abstract properties and accessor implementations for these properties but properties cannot have a backing field (state)
 
 
-```
+```kotlin
 //declaration
 
 interface MyInterface {
@@ -29,12 +29,11 @@ class A: MyInterface {
 		println("overridden foo")
 	}
 }
-
 ```
 
 ### Interface with Properties
 
-```
+```kotlin
 //declaration
 
 interface MyInterfaceWithProps {
@@ -53,12 +52,11 @@ interface MyInterfaceWithProps {
 class B: MyInterfaceWithProps {
 	override val prop: Int = 11
 }
-
 ```
 
 ### Interface Inheritance
 
-```
+```kotlin
 interface Named {
 	val name: String
 }
