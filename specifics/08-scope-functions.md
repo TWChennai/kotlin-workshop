@@ -98,6 +98,8 @@ fun main() {
 
     println(person)
 }
+
+data class Person(var name: String, var age: Long)
 ```
 
 ### Exercises
