@@ -9,6 +9,8 @@
 	- [06-sealed-classes](./specifics/06-sealed-classes.md)
 	- [07-grouping](./specifics/07-grouping.md)
 	- [08-scope-functions](./specifics/08-scope-functions.md)
+	- [09-interfaces](./specifics/09-interfaces.md)
+	- [10-funfacts](./specifics/10-funfacts.md)
 - Problem Statements
 	- [prob1](./problem-statements/prob1.md)
 	- [prob2](./problem-statements/prob2.md)
