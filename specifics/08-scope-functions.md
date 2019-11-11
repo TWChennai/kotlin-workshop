@@ -56,12 +56,50 @@ It is used in the following cases:
    ```
 
 ### also
+The scope function `also` can be used to side effect in a call chain without breaking it.
+It can be simply read as "and also do the following".
+- For eg:
+  ```kotlin
+  api.get()
+     .also{Log.debug(it)}
+     .map{*/ someother stuff /*}
+     ```
 
 ### run
+It can be used when your lambda contains both the object initialization and the computation of the return value.
+-For eg:
+  ```
+  val result = service.run {
+    port = 8080
+    query(prepareRequest() + " to port $port")
+}
+  ```
 
 ### with
+The function `with` can be used to logically group calls on an object.
+It can be read as "with this object, do the following".
+- For eg:
+  ```kotlin
+  with(message) {
+    init("www.message-url.com")
+    login(token)
+    post("Hi there")
+  }
+  ```
 
 ### apply
+The scope function `let` can be used to initialize or configure an object.
+It can be simply read as "apply the following assignments to the object".
+
+It is used in the following case:
+- To initialize an object. For eg:
+  ```kotlin
+  val danial = Employee().apply{
+    name = "Daniel"
+    age = 25
+    gender = "male"
+  }
+  ```
 
 ### Mutation of Objects
 The following example illustrates how objects are mutated from within scope functions:
