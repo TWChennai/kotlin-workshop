@@ -66,9 +66,9 @@ It can be simply read as "and also do the following".
      ```
 
 ### run
-It can be used when your lambda contains both the object initialization and the computation of the return value.
+It can be used when the lambda contains both the object initialization and the computation of the return value.
 -For eg:
-  ```
+  ```kotlin
   val result = service.run {
     port = 8080
     query(prepareRequest() + " to port $port")
